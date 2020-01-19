@@ -9,7 +9,13 @@ class DataSource(object):
         raise NotImplementedError
 
 
-class FileSource(DataSource):
+class URLSource(DataSource):
     def get_data(self):
         url = self.kwargs.get("url")
         return pd.read_csv(url)
+
+
+class FileSource(DataSource):
+    def get_data(self):
+        fd = self.kwargs.get("file")
+        return pd.read_csv(fd)

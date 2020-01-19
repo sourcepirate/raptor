@@ -1,4 +1,4 @@
-from .datasource import DataSource, FileSource
+from .datasource import DataSource, FileSource, URLSource
 from .transform import TransformMixin, GroupBy, Pivot
 
 
@@ -27,7 +27,7 @@ class TransformRegistry(BaseRegistry):
 
 
 datasource_registry = DataSourceRegistry()
-datasource_registry.register("url", FileSource)
+datasource_registry.register("url", URLSource)
 datasource_registry.register("file", FileSource)
 transformation_registry = TransformRegistry()
 transformation_registry.register("groupby", GroupBy)
