@@ -1,0 +1,11 @@
+<html>
+<body>
+  {% for section in  sections %}
+    <div>
+       <h3> {{ section.section_title }} </h3>
+       <h4> {{ section.section_description }} </h4>
+       <div> {{ section.body }} </div>
+    </div>
+  {% endfor %}
+</body>
+</html>

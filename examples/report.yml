@@ -1,0 +1,24 @@
+template: default
+title: Iris Data Reports
+sender: sourcepirate@codelantics.com
+receivers:
+  - redspectrum@codelantics.com
+sections:
+  - name: intro
+    description: desciription text
+    datasource:
+      type: url
+      url: https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv
+    transform:
+      - type: groupby
+        by:
+        - species
+  - name: intro2
+    description: desciription text
+    datasource:
+      type: url
+      url: https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv
+    transform:
+      - type: groupby
+        by:
+        - species
