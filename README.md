@@ -1,9 +1,7 @@
 ## Raptor
 
 [![Build Status](https://travis-ci.org/sourcepirate/raptor.svg?branch=master)](https://travis-ci.org/sourcepirate/raptor)
-
 [![Updates](https://pyup.io/repos/github/sourcepirate/raptor/shield.svg)](https://pyup.io/repos/github/sourcepirate/raptor/)
-
 [![Python 3](https://pyup.io/repos/github/sourcepirate/raptor/python-3-shield.svg)](https://pyup.io/repos/github/sourcepirate/raptor/)
 
 Raptor is a configurable html report generation tool. Based on pandas dataframe.
