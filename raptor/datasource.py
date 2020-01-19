@@ -2,7 +2,6 @@ import pandas as pd
 
 
 class DataSource(object):
-
     def __init__(self, **kwargs):
         self.kwargs = kwargs
 

@@ -1,6 +1,6 @@
-
 from .datasource import DataSource, FileSource
 from .transform import TransformMixin, GroupBy, Pivot
+
 
 class BaseRegistry(object):
     def __init__(self, _type):
@@ -17,16 +17,13 @@ class BaseRegistry(object):
 
 
 class DataSourceRegistry(BaseRegistry):
-
     def __init__(self):
         super(DataSourceRegistry, self).__init__(DataSource)
 
 
 class TransformRegistry(BaseRegistry):
-
     def __init__(self):
         super(TransformRegistry, self).__init__(TransformMixin)
-
 
 
 datasource_registry = DataSourceRegistry()
@@ -34,4 +31,4 @@ datasource_registry.register("url", FileSource)
 datasource_registry.register("file", FileSource)
 transformation_registry = TransformRegistry()
 transformation_registry.register("groupby", GroupBy)
-transformation_registry.register('pivot', Pivot)
+transformation_registry.register("pivot", Pivot)

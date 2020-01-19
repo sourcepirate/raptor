@@ -7,7 +7,7 @@ from raptor.reports import Reports
 
 
 @click.command()
-@click.argument('infile', type=click.File('rb'), nargs=1)
+@click.argument("infile", type=click.File("rb"), nargs=1)
 def main(infile):
     try:
         content = infile.read()

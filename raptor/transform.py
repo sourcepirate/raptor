@@ -1,13 +1,12 @@
-
 import pandas as pd
 
-class TransformMixin(object):
 
+class TransformMixin(object):
     def transform(self, df):
         return df
 
-class TrasformPipeline(object):
 
+class TrasformPipeline(object):
     def __init__(self, stages):
         self.stages = []
         for stage in stages:
@@ -20,21 +19,18 @@ class TrasformPipeline(object):
             df_copy = stage.transform(df_copy)
         return df_copy
 
-class GroupBy(TransformMixin):
 
+class GroupBy(TransformMixin):
     def __init__(self, **kwds):
         self.kwds = kwds
-    
+
     def transform(self, df):
-        return  df.groupby(**self.kwds).sum()
+        return df.groupby(**self.kwds).sum()
+
 
 class Pivot(TransformMixin):
-
     def __init__(self, **kwargs):
         self.kwargs = kwargs
-    
+
     def transform(self, df):
-        return  df.pivot(**self.kwargs)
-
-
-# class Transformation
+        return pd.pivot_table(df, **self.kwargs)
