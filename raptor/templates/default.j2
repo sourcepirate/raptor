@@ -1,11 +1,40 @@
 <html>
+
+<head>
+    <style>
+        body {
+            color: #333;
+            padding: 1.5em;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th {
+            background-color: #eee;
+            font-weight: bold;
+        }
+
+        th,
+        td {
+            border: 0.125em solid #333;
+            line-height: 1.5;
+            padding: 0.75em;
+            text-align: left;
+        }
+    </style>
+</head>
+
 <body>
-  {% for section in  sections %}
+    {% for section in  sections %}
     <div>
-       <h3> {{ section.section_title }} </h3>
-       <h4> {{ section.section_description }} </h4>
-       <div> {{ section.body }} </div>
+        <h3> {{ section.section_title }} </h3>
+        <h4> {{ section.section_description }} </h4>
+        <div> {{ section.body }} </div>
     </div>
-  {% endfor %}
+    {% endfor %}
 </body>
+
 </html>
