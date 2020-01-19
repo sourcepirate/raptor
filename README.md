@@ -13,7 +13,7 @@ Raptor is a configurable html report generation tool. Based on pandas dataframe.
 ```
 python setup.py install
 
-raptor config.yml
+raptor config.yml > report.html
 
 ```
 
