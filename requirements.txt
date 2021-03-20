@@ -1,6 +1,6 @@
 Click>=7.0
 arrow==0.15.5
-Jinja2==2.10.3
+Jinja2==2.11.3
 requests==2.22.0
 numpy==1.18.1
 pandas==0.25.3
